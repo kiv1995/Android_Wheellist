@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         myListView = (ListView) findViewById(R.id.myWheelList);
 
         listWheels = new ArrayList<>();
-        listWheels.add(new Wheel("Continentl","20€","5mm","01 020304050"));
-        listWheels.add(new Wheel("Continentl","35€","5mm","01 020304050"));
-        listWheels.add(new Wheel("Continentl","100€","20mm","01 020304050"));
+        listWheels.add(new Wheel("Continental","20€","5mm","01 020304050"));
+        listWheels.add(new Wheel("Continental","35€","5mm","01 020304050"));
+        listWheels.add(new Wheel("Continental","100€","20mm","01 020304050"));
         listWheels.add(new Wheel("Michelin","5€","5mm","01 020304050"));
         listWheels.add(new Wheel("Michelin","20€","5mm","01 020304050"));
         listWheels.add(new Wheel("Franklin","100€","5mm","01 020304050"));
