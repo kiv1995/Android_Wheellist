@@ -31,13 +31,6 @@ public class ShowWheelActivity extends AppCompatActivity {
         viewPhone.setText(wheel.getPhoneNumber());
 
     }
-
-    /*public void showOnMap(View view) {
-        // Map point based on address
-        Uri location = Uri.parse("geo:0,0?q="+wheel.getAddress());
-        Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
-        startActivity(mapIntent);
-    }*/
     public void call(View view) {
         Uri number = Uri.parse("tel:"+wheel.getPhoneNumber());
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
