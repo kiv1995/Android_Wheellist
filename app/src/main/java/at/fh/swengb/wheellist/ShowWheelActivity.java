@@ -38,4 +38,9 @@ public class ShowWheelActivity extends AppCompatActivity {
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
         startActivity(callIntent);
     }
+    public void show(View view){
+        Uri url = Uri.parse("https://www.reifendirekt.at/Sommerreifen.html");
+        Intent urlIntent = new Intent(Intent.ACTION_VIEW, url);
+        startActivity(urlIntent);
+    }
 }
