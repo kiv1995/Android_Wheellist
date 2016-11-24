@@ -12,15 +12,17 @@ public class Wheel implements Serializable {
     private String deep;
     private String phoneNumber;
     private String used;
+    private String diameterSteel;
 
     public Wheel() {
     }
-    public Wheel(String name, String cost, String deep, String phoneNumber, String used) {
+    public Wheel(String name, String cost, String deep, String phoneNumber, String used,String diameterSteel) {
         this.name = name;
         this.cost = cost;
         this.deep = deep;
         this.phoneNumber = phoneNumber;
         this.used = used;
+        this. diameterSteel = diameterSteel;
     }
     public String getName() {
         return name;
@@ -52,6 +54,12 @@ public class Wheel implements Serializable {
     public void setUsed(String used) {
         this.used = used;
     }
+    public String getDiameterSteel() {
+        return diameterSteel;
+    }
+    public void setDiameterSteel(String diameterSteel) {
+        this.diameterSteel = diameterSteel;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -64,7 +72,8 @@ public class Wheel implements Serializable {
         if (deep != null ? !deep.equals(wheel.deep) : wheel.deep != null) return false;
         if (phoneNumber != null ? !phoneNumber.equals(wheel.phoneNumber) : wheel.phoneNumber != null)
             return false;
-        return used != null ? used.equals(wheel.used) : wheel.used == null;
+        if (used != null ? !used.equals(wheel.used) : wheel.used != null) return false;
+        return diameterSteel != null ? diameterSteel.equals(wheel.diameterSteel) : wheel.diameterSteel == null;
 
     }
     @Override
@@ -74,6 +83,7 @@ public class Wheel implements Serializable {
         result = 31 * result + (deep != null ? deep.hashCode() : 0);
         result = 31 * result + (phoneNumber != null ? phoneNumber.hashCode() : 0);
         result = 31 * result + (used != null ? used.hashCode() : 0);
+        result = 31 * result + (diameterSteel != null ? diameterSteel.hashCode() : 0);
         return result;
     }
     public String toString() {
@@ -82,7 +92,7 @@ public class Wheel implements Serializable {
                 .append(cost)
                 .append('\n')
                 .append(deep).append('\n')
-                .append(phoneNumber).append(used);
+                .append(phoneNumber).append(used).append(diameterSteel);
         return sb.toString();
     }
 }

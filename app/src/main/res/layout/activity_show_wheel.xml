@@ -47,7 +47,6 @@
             android:id="@+id/textViewDeep"
             android:layout_marginTop="30dp"
             android:textSize="24sp" />
-
         <TextView
             android:text="TextView"
             android:layout_width="match_parent"
