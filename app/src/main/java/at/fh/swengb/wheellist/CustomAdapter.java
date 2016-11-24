@@ -19,9 +19,9 @@ public class CustomAdapter extends android.widget.BaseAdapter {
     Context context;
     LayoutInflater inflter;
 
-    public CustomAdapter(Context applicationContext, List<Wheel> listUsers) {
+    public CustomAdapter(Context applicationContext, List<Wheel> listWheels) {
         this.context = applicationContext;
-        this.listWheels= listUsers;
+        this.listWheels= listWheels;
         inflter = (LayoutInflater.from(applicationContext));
     }
     @Override
@@ -41,12 +41,13 @@ public class CustomAdapter extends android.widget.BaseAdapter {
         if (view==null) {
             view = inflter.inflate(R.layout.row_item, null);//set layout for displaying items
         }
-        TextView viewName=(TextView)view.findViewById(R.id.textViewName);
-        TextView viewCost=(TextView)view.findViewById(R.id.textViewCost);
+        //Fehler bei Absturz gefunden - aufpassen auf textViewList
+        TextView viewName=(TextView)view.findViewById(R.id.textViewListName);
+        TextView viewCost=(TextView)view.findViewById(R.id.textViewListDeep);
         TextView viewPhone=(TextView)view.findViewById(R.id.textViewListPhone);
 
         Wheel wheel = listWheels.get(i);
-        viewName.setText(wheel.getName()+" "+wheel.getCost());
+        viewName.setText(wheel.getName()+", "+wheel.getCost());
         viewCost.setText(wheel.getDeep());
         viewPhone.setText(wheel.getPhoneNumber());
 

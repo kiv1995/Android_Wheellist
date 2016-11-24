@@ -24,7 +24,7 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:text="Address:"
+            android:text="Profiltiefe:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
@@ -34,7 +34,7 @@
             android:text="fsdfsdfsd fsdfsd fsfsf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textViewListAddress"
+            android:id="@+id/textViewListDeep"
             android:layout_weight="1"
             android:layout_marginLeft="10dp" />
     </LinearLayout>
@@ -46,7 +46,7 @@
         android:layout_marginBottom="10dp">
 
         <TextView
-            android:text="Tel.:"
+            android:text="Händler:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView4"

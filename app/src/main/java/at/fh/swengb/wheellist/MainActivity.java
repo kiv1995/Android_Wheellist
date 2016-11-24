@@ -16,7 +16,7 @@ import at.fh.swengb.wheellist.model.Wheel;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
     private List<Wheel> listWheels;
     private ListView myListView;
-    private ArrayAdapter<Wheel> myAdapter;
+    private CustomAdapter myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         listWheels.add(new Wheel("Michelin","20€","5mm","01 020304050"));
         listWheels.add(new Wheel("Franklin","100€","5mm","01 020304050"));
 
-        myAdapter = new ArrayAdapter <Wheel>(this,R.layout.row_item_simple,R.id.textViewSimpleName,listWheels);
+        myAdapter = new CustomAdapter(this,listWheels);
         myListView.setAdapter(myAdapter);
         myListView.setOnItemClickListener(this);
     }
@@ -43,6 +43,5 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Intent intent = new Intent(view.getContext(),ShowWheelActivity.class);
         intent.putExtra("wheel",selectedWheel);
         startActivity(intent);
-
     }
 }
