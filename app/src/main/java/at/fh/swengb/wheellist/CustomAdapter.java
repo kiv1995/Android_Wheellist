@@ -45,12 +45,13 @@ public class CustomAdapter extends android.widget.BaseAdapter {
         TextView viewName=(TextView)view.findViewById(R.id.textViewListName);
         TextView viewCost=(TextView)view.findViewById(R.id.textViewListDeep);
         TextView viewPhone=(TextView)view.findViewById(R.id.textViewListPhone);
+        TextView viewUsed = (TextView)view.findViewById(R.id.textViewListUsed);
 
         Wheel wheel = listWheels.get(i);
         viewName.setText(wheel.getName()+", "+wheel.getCost());
         viewCost.setText(wheel.getDeep());
         viewPhone.setText(wheel.getPhoneNumber());
-
+        viewUsed.setText(wheel.getUsed());
         return view;
     }
 

@@ -11,14 +11,16 @@ public class Wheel implements Serializable {
     private String cost;
     private String deep;
     private String phoneNumber;
+    private String used;
 
     public Wheel() {
     }
-    public Wheel(String name, String cost, String deep, String phoneNumber) {
+    public Wheel(String name, String cost, String deep, String phoneNumber, String used) {
         this.name = name;
         this.cost = cost;
         this.deep = deep;
         this.phoneNumber = phoneNumber;
+        this.used = used;
     }
     public String getName() {
         return name;
@@ -44,6 +46,12 @@ public class Wheel implements Serializable {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+    public String getUsed() {
+        return used;
+    }
+    public void setUsed(String used) {
+        this.used = used;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -54,7 +62,9 @@ public class Wheel implements Serializable {
         if (name != null ? !name.equals(wheel.name) : wheel.name != null) return false;
         if (cost != null ? !cost.equals(wheel.cost) : wheel.cost != null) return false;
         if (deep != null ? !deep.equals(wheel.deep) : wheel.deep != null) return false;
-        return phoneNumber != null ? phoneNumber.equals(wheel.phoneNumber) : wheel.phoneNumber == null;
+        if (phoneNumber != null ? !phoneNumber.equals(wheel.phoneNumber) : wheel.phoneNumber != null)
+            return false;
+        return used != null ? used.equals(wheel.used) : wheel.used == null;
 
     }
     @Override
@@ -63,16 +73,16 @@ public class Wheel implements Serializable {
         result = 31 * result + (cost != null ? cost.hashCode() : 0);
         result = 31 * result + (deep != null ? deep.hashCode() : 0);
         result = 31 * result + (phoneNumber != null ? phoneNumber.hashCode() : 0);
+        result = 31 * result + (used != null ? used.hashCode() : 0);
         return result;
     }
-    @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer();
         sb.append(name).append("; ")
                 .append(cost)
                 .append('\n')
                 .append(deep).append('\n')
-                .append(phoneNumber);
+                .append(phoneNumber).append(used);
         return sb.toString();
     }
 }

@@ -24,11 +24,13 @@ public class ShowWheelActivity extends AppCompatActivity {
         TextView viewCost = (TextView) findViewById(R.id.textViewCost);
         TextView viewDeep = (TextView) findViewById(R.id.textViewDeep);
         TextView viewPhone = (TextView) findViewById(R.id.textViewPhone);
+        TextView viewUsed = (TextView) findViewById(R.id.textViewUsed);
 
         viewName.setText(wheel.getName());
         viewCost.setText(wheel.getCost());
         viewDeep.setText(wheel.getDeep());
         viewPhone.setText(wheel.getPhoneNumber());
+        viewUsed.setText(wheel.getUsed());
 
     }
     public void call(View view) {
